@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <title>Password Tester</title>
+</head>
+    <body>
+        <form action="#">
+            <h1 class="signIn">Create an Account</h1>
+            <input id="username" type="username" value="" placeholder="User name" minlength="6">
+            <input  id="password" type="password" value="" placeholder="Password" maxlength="20" onkeyup="check(this.value)">
+            <input id="secpassword" type="password" value="" placeholder="Re-type Password" maxlength="20">
+            <br>
+            <input type="checkbox" onclick="showPassword()">Show Password
+            <br>
+            <a href="#" onclick="passwordTest()"><button class="logIn">Log in</button></a>
+        </form>
+        <h2>Password Requirements</h2>
+        <span id="numberLimit">Password must have at least 8 characters but no more than 20</span>
+        <br>
+        <span id="specialChar"> Must contain at least one special character (!, @, #, $, %, &)</span>
+        <br>
+        <span id="upperCase">Must contain at least one uppercase letter</span>
+        <br>
+        <span id="lowerCase">Must contain at least one lowercase letter</span>
+        <br>
+        <span id="numberDetection">Must contain at least one number</span>
+        <br>
+        <span id="spaceDetection">Cannot contain spaces</span>
+    </body>
+    <script src="js/app.js"></script>
+</html>
